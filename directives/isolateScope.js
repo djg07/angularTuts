@@ -4,15 +4,18 @@
 
 var app = angular.module("drinkApp", [])
 
-app.controller=("AppCtrl", function($scope) {
-
+app.controller("AppCtrl", function($scope) {
+    $scope.ctrlFlavour = "blackberry"
 
 })
 
 app.directive("drink", function() {
-        return {
-            scope: {},
-            template: '<div>{{flavour}}</div>'
-        }
+    return {
+        scope: {
+            flavour: "@"
+        },
+        template: '<div>{{flavour}}</div>'
+
+    }
 
 })
