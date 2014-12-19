@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <title></title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
-    <script type="text/javascript" src="isolateScope.js"></script>
+    <script type="text/javascript" src="isolateScopeReview.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.css">
 </head>
 <body ng-app="phoneApp">
+    <div ng-controller="AppCtrl">
 
+        <phone number="000 000 0000" make-call="addToMessageLog(number, message)"></phone>
+
+        <h1>Message Log</h1>
+        <li ng-repeat="message in messageLog"><b>Date:</b> {{message.date}} <b>Message:</b> {{message.content}}</li>
+
+
+
+
+
+
+
+
+    </div>
 </body>
 </html>
